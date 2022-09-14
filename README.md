@@ -22,4 +22,7 @@ Here are some ideas to get you started:
 
 
 ![Top Languages Card](https://github-readme-stats.vercel.app/api/top-langs/?username=Navneethd8)
+<p>
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=g3root&theme=default&title_color=000000&text_color=000000&bg_color=ffffff&hide_border=true&layout=compact" alt="g3root stats card" /></p>
+
 

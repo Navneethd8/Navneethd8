@@ -17,7 +17,6 @@ Here are some ideas to get you started:
 
 
 // README.md
-![Github stats](https://github-readme-stats.vercel.app/api?username=Navneethd8&theme=highcontrast&show_icons=true&count_private=true)
 [![Navneeth's GitHub stats](https://github-readme-stats.vercel.app/api?username=Navneethd8)](https://github.com/Navneethd8/github-readme-stats)
 
 

@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 
 // README.md
 [![Navneeth's GitHub stats](https://github-readme-stats.vercel.app/api?username=Navneethd8)](https://github.com/Navneethd8/github-readme-stats)
-<img src="https://camo.githubusercontent.com/fb67446a938f6ad2776aa732ee77965a0564f85ff48970eadb3b22ceff350e1a/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d5369646468616e744d61646875722673686f775f69636f6e733d74727565267468656d653d64726163756c61" alt="Anurag's GitHub stats" data-canonical-src="https://github-readme-stats.vercel.app/api?username=Navneethd8&amp;show_icons=true&amp;theme=dracula" style="max-width: 100%;">
+https://github-readme-stats.vercel.app/api?username=Navneethd8&amp;show_icons=true&amp;theme=dracula
 
 
 

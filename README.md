@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 
 // README.md
 [![Navneeth's GitHub stats](https://github-readme-stats.vercel.app/api?username=Navneethd8)](https://github.com/Navneethd8/github-readme-stats)
-https://github-readme-stats.vercel.app/api?username=Navneethd8&amp;show_icons=true&amp;theme=dracula
+<img src='https://github-readme-stats.vercel.app/api?username=Navneethd8&amp;show_icons=true&amp;theme=dracula'></image>
 
 
 

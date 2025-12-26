@@ -62,7 +62,7 @@ P(Adds Optimization Layer) = 0.55
 ## Exploratory Analysis of My GitHub Activity
 ### Year-over-Year Commit Volume
 
-<img width="640" height="480" alt="Year-over-Year Commit Volume" src="https://github.com/user-attachments/assets/10fa8c23-d7a1-43d8-9fb6-242bf5c6eb8c" />
+<img width="640" height="480" alt="Year-over-Year Commit Volume" src="https://github.com/user-attachments/assets/3b999cfc-943e-413a-86e7-18ebb04a02c5" />
 
 ### Commits over the past year
 <img src="https://ghchart.rshah.org/1500fc/navneethd8" alt="navneethd8's Github chart" />

@@ -59,9 +59,12 @@ P(Trusts Metrics Without Validation) = 0.02
 P(Adds Optimization Layer) = 0.55
 
 
-## :fire: My Stats :
+## Exploratory Analysis of My GitHub Activity
+### Year-over-Year Commit Volume
 
+<img width="640" height="480" alt="Year-over-Year Commit Volume" src="https://github.com/user-attachments/assets/10fa8c23-d7a1-43d8-9fb6-242bf5c6eb8c" />
 
+### Commits over the past year
 <img src="https://ghchart.rshah.org/1500fc/navneethd8" alt="navneethd8's Github chart" />
 
 

@@ -1,71 +1,43 @@
-# NavneethDS v1.0
-*A production-oriented data scientist trained on real-world systems, constraints, and messy data.*
+```yaml
+disclaimer: THIS IS WORK IN PROGRRESS, Check out https://navneethd.me for more about me!
+name: Navneeth Dhamotharan
+username: navneethd8
+location: Seattle, WA / Dubai, UAE
+roles:
+  - Data Scientist
+  - Data Engineer
+  - Software Engineer
 
-## Intended Use
-- Predictive modeling on large, structured datasets
-- Optimization under real-world constraints
-- Translating ambiguous business questions into features
-- Rapid iteration from EDA → model → evaluation → impact
+about:
+  - I enjoy building clean, thoughtful software
+  - Interested in systems, design, and automation
+  - Always learning, always curious
 
-## Training Data
-- 1.2M+ healthcare records (cost prediction)
-- 600K+ flight operations records (delay prediction)
-- 400K+ macroeconomic indicators (IMF, inflation modeling)
-- 300K+ NCAA basketball records (statistical inference)
-- Production systems, failed experiments, and stakeholder feedback
+skills:
+  languages:
+    - Python
+    - JavaScript
+    - Go
+  frameworks:
+    - React
+    - Node.js
+    - Django
+  tools:
+    - Git
+    - Docker
+    - Linux
 
-## Model Architecture
-- Feature Engineering > Model Complexity
-- Strong preference for:
-  - Gradient Boosting (XGBoost, LightGBM)
-  - Interpretable baselines before deep learning
-- Optimization layer when prediction alone is insufficient
+current_focus:
+  - Improving system design skills
+  - Open source contributions
+  - Writing better documentation
 
-## Evaluation Metrics
-- R², RMSE, MAE (model performance)
-- Runtime & pipeline efficiency
-- Business impact (↓ delays, ↑ efficiency, ↑ engagement)
-- Stakeholder interpretability
-  
-## Known Limitations
-- Performance degrades with poorly defined objectives
-- Requires clean evaluation metrics to avoid overfitting to noise
-- Coffee-dependent optimization convergence
+contact:
+  github: https://github.com/navneethd8
+  linkedin: https://linkedin.com/in/navneethd
+  email: navneethd8@gmail.com
 
-
-## Experiment Log
-
-### Experiment #21 — Flight Delay Prediction
-**Hypothesis:** Feature engineering + ensemble methods outperform deep models  
-**Data:** 600K+ rows, 90+ features  
-**Result:** R² ≈ 0.80, 15% faster evaluation pipeline  
-**Impact:** Operational efficiency ↑ 3%
-
----
-
-### Experiment #18 — Healthcare Cost Prediction
-**Hypothesis:** Proper encoding + hyperparameter tuning improves generalization  
-**Data:** 1.2M records  
-**Result:** Improved predictive accuracy, 99% data retention  
-**Notes:** Optuna proved more effective than manual grid search
-
-
-## Skill Distribution
-
-P(Uses Python Weekly) = 0.95  
-P(Chooses XGBoost Over NN) = 0.78  
-P(Deploys Model After EDA) = 0.64  
-P(Trusts Metrics Without Validation) = 0.02  
-P(Adds Optimization Layer) = 0.55
-
-
-## Exploratory Analysis of My GitHub Activity
-### Year-over-Year Commit Volume
-
-<img width="640" height="480" alt="Year-over-Year Commit Volume" src="https://github.com/user-attachments/assets/3b999cfc-943e-413a-86e7-18ebb04a02c5" />
-
-### Commits over the past year
-<img src="https://ghchart.rshah.org/1500fc/navneethd8" alt="navneethd8's Github chart" />
-
-
-> This profile prioritizes experiments, metrics, and impact over buzzwords.
+fun_facts:
+  - Coffee > sleep ☕
+  - Dark mode everything
+  - Automates small annoyances

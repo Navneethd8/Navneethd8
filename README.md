@@ -38,7 +38,7 @@ skills:
     - TensorFlow
     - XGBoost
     - LightGBM
-    - LSTM
+    - Keras
     - Matplotlib
     - Seaborn
     - GeoPandas

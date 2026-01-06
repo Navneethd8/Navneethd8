@@ -1,71 +1,134 @@
-# NavneethDS v1.0
-*A production-oriented data scientist trained on real-world systems, constraints, and messy data.*
+```yaml
+name: Navneeth Dhamotharan
+username: Navneethd8
+location: Seattle, WA
+status: student & software engineer
+graduation: June 2027
 
-## Intended Use
-- Predictive modeling on large, structured datasets
-- Optimization under real-world constraints
-- Translating ambiguous business questions into features
-- Rapid iteration from EDA → model → evaluation → impact
+education:
+  university: University of Washington – Seattle
+  degrees:
+    - B.S. Informatics (Data Science)
+    - B.A. Economics
+  gpa: 3.6 / 4.0
+  coursework:
+    - Data Structures & Algorithms
+    - Data Science Fundamentals (R)
+    - Exploratory & Statistical Data Analysis
+    - Object-Oriented Programming (Java)
+    - Intermediate Data Programming (Python)
+    - Databases
 
-## Training Data
-- 1.2M+ healthcare records (cost prediction)
-- 600K+ flight operations records (delay prediction)
-- 400K+ macroeconomic indicators (IMF, inflation modeling)
-- 300K+ NCAA basketball records (statistical inference)
-- Production systems, failed experiments, and stakeholder feedback
+skills:
+  languages:
+    - Python
+    - Java
+    - JavaScript
+    - SQL (Postgres)
+    - R
+    - HTML/CSS
+  frameworks:
+    - React
+    - Node.js
+    - Svelte
+  ml_libraries:
+    - Pandas
+    - NumPy
+    - Scikit-learn
+    - TensorFlow
+    - XGBoost
+    - LightGBM
+    - Keras
+    - Matplotlib
+    - Seaborn
+    - GeoPandas
+  tools:
+    - Git
+    - Docker
+    - Bash
+    - Firebase
+    - GCP
+    - AWS (Lambda, S3, EC2, Amplify, Step Functions)
+    - Azure DevOps
+    - Jupyter Notebook
+    - VS Code
+    - IntelliJ
+    - PyCharm
+    - RStudio
 
-## Model Architecture
-- Feature Engineering > Model Complexity
-- Strong preference for:
-  - Gradient Boosting (XGBoost, LightGBM)
-  - Interpretable baselines before deep learning
-- Optimization layer when prediction alone is insufficient
+experience:
+  - role: Data Science Intern
+    company: FlyDubai
+    location: Dubai, UAE
+    duration: Jun 2025 – Sep 2025
+    impact:
+      - Built flight delay prediction models on 600k+ rows with 90+ features (R² ≈ 0.80)
+      - Evaluated 5 ML models using chained pipelines (15% faster evaluation)
+      - Improved operational efficiency by 3% using linear programming (PuLP)
+      - Increased sentiment analysis accuracy by 30% via prompt engineering on Amazon Bedrock
 
-## Evaluation Metrics
-- R², RMSE, MAE (model performance)
-- Runtime & pipeline efficiency
-- Business impact (↓ delays, ↑ efficiency, ↑ engagement)
-- Stakeholder interpretability
-  
-## Known Limitations
-- Performance degrades with poorly defined objectives
-- Requires clean evaluation metrics to avoid overfitting to noise
-- Coffee-dependent optimization convergence
+  - role: Software Engineer
+    organization: Software Engineering Career Club (SWECC)
+    duration: Apr 2025 – Present
+    impact:
+      - Led SWECC Labs, mentoring 35+ students in open-source development
+      - Improved job search workflows across 38+ repositories for 2000+ engineers
 
+  - role: Director
+    organization: Eat Together
+    duration: Dec 2024 – Present
+    impact:
+      - Led a team of 18 to ship features for 550+ users
+      - Built recommendation systems and community tooling
+      - Reduced code review time by 20% through structured feedback
+      - Mentored 20+ developers in React Native, Git, and GCP
 
-## Experiment Log
+  - role: Software Engineer
+    organization: Eat Together
+    duration: Jan 2024 – Dec 2024
+    impact:
+      - Developed media gallery features using React Native
+      - Integrated Firebase storage for scalable image handling
+      - Scaled app to 400+ users through performance optimization
+      - Resolved 35+ UI bugs and 8+ critical issues
 
-### Experiment #21 — Flight Delay Prediction
-**Hypothesis:** Feature engineering + ensemble methods outperform deep models  
-**Data:** 600K+ rows, 90+ features  
-**Result:** R² ≈ 0.80, 15% faster evaluation pipeline  
-**Impact:** Operational efficiency ↑ 3%
+projects:
+  - name: DataMed
+    stack: [Python, Scikit-learn, Optuna, Matplotlib, Seaborn]
+    highlights:
+      - Modeled healthcare costs on 1.2M records with 99% data retention
+      - Feature engineered categorical variables for ML readiness
+      - Tuned models with Optuna to improve prediction accuracy
+      - 3rd place – Best ML Model (6th DubsTech Datathon)
+    repo: https://github.com/AdamSkog/Datathon-DataMed
 
----
+  - name: Macro Scope
+    stack: [Scikit-learn, Pandas, XGBoost, GeoPandas]
+    highlights:
+      - Processed 400k+ IMF records for macroeconomic analysis
+      - Visualized trends across fiscal and inflation indicators
+      - Reduced RMSE by 20% using grid search and cross-validation
+    repo: https://github.com/Navneethd8/macro-indicators
 
-### Experiment #18 — Healthcare Cost Prediction
-**Hypothesis:** Proper encoding + hyperparameter tuning improves generalization  
-**Data:** 1.2M records  
-**Result:** Improved predictive accuracy, 99% data retention  
-**Notes:** Optuna proved more effective than manual grid search
+  - name: NCAA Basketball Analysis
+    stack: [R, ggplot2, dplyr]
+    highlights:
+      - Analyzed 20 years of NCAA basketball data (300k+ rows)
+      - Found 25% correlation between free throws and tournament wins
+    repo: https://github.com/Navneethd8/march-madness-analysis
 
+interests:
+  - machine learning
+  - data-driven systems
+  - developer tooling
+  - open source
+  - mentoring
 
-## Skill Distribution
+contact:
+  email: navneethd8@gmail.com
+  github: https://github.com/Navneethd8
+  linkedin: https://linkedin.com/in/navneethd
+  website: https://navneeth.vercel.app
 
-P(Uses Python Weekly) = 0.95  
-P(Chooses XGBoost Over NN) = 0.78  
-P(Deploys Model After EDA) = 0.64  
-P(Trusts Metrics Without Validation) = 0.02  
-P(Adds Optimization Layer) = 0.55
-
-
-## Exploratory Analysis of My GitHub Activity
-### Year-over-Year Commit Volume
-
-<img width="640" height="480" alt="Year-over-Year Commit Volume" src="https://github.com/user-attachments/assets/3b999cfc-943e-413a-86e7-18ebb04a02c5" />
-
-### Commits over the past year
-<img src="https://ghchart.rshah.org/1500fc/navneethd8" alt="navneethd8's Github chart" />
-
-
-> This profile prioritizes experiments, metrics, and impact over buzzwords.
+mood: caffeinated ☕
+editor: VS Code

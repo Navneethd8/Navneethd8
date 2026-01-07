@@ -2,8 +2,12 @@
 name: Navneeth Dhamotharan
 username: Navneethd8
 location: Seattle, WA
-status: student & software engineer
+status: student
 graduation: June 2027
+aspiring_roles:
+  - Data Scientist
+  - Data Engineer
+  - Software Engineer
 
 education:
   university: University of Washington – Seattle

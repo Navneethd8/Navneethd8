@@ -1,138 +1,53 @@
-```yaml
-name: Navneeth Dhamotharan
-username: Navneethd8
-location: Seattle, WA
-status: student
-graduation: June 2027
-aspiring_roles:
-  - Data Scientist
-  - Data Engineer
-  - Software Engineer
+# Hey, I'm Navneeth
 
-education:
-  university: University of Washington – Seattle
-  degrees:
-    - B.S. Informatics (Data Science)
-    - B.A. Economics
-  gpa: 3.6 / 4.0
-  coursework:
-    - Data Structures & Algorithms
-    - Data Science Fundamentals (R)
-    - Exploratory & Statistical Data Analysis
-    - Object-Oriented Programming (Java)
-    - Intermediate Data Programming (Python)
-    - Databases
+**Data Science + Economics @ UW Seattle** · graduating June 2027
+Building at the intersection of ML, systems, and things that actually ship.
 
-skills:
-  languages:
-    - Python
-    - Java
-    - JavaScript
-    - SQL (Postgres)
-    - R
-    - HTML/CSS
-  frameworks:
-    - React
-    - Node.js
-    - Svelte
-  ml_libraries:
-    - Pandas
-    - NumPy
-    - Scikit-learn
-    - TensorFlow
-    - XGBoost
-    - LightGBM
-    - Keras
-    - Matplotlib
-    - Seaborn
-    - GeoPandas
-  tools:
-    - Git
-    - Docker
-    - Bash
-    - Firebase
-    - GCP
-    - AWS (Lambda, S3, EC2, Amplify, Step Functions)
-    - Azure DevOps
-    - Jupyter Notebook
-    - VS Code
-    - IntelliJ
-    - PyCharm
-    - RStudio
+---
 
-experience:
-  - role: Data Science Intern
-    company: FlyDubai
-    location: Dubai, UAE
-    duration: Jun 2025 – Sep 2025
-    impact:
-      - Built flight delay prediction models on 600k+ rows with 90+ features (R² ≈ 0.80)
-      - Evaluated 5 ML models using chained pipelines (15% faster evaluation)
-      - Improved operational efficiency by 3% using linear programming (PuLP)
-      - Increased sentiment analysis accuracy by 30% via prompt engineering on Amazon Bedrock
+# What I'm Working On
 
-  - role: Software Engineer
-    organization: Software Engineering Career Club (SWECC)
-    duration: Apr 2025 – Present
-    impact:
-      - Led SWECC Labs, mentoring 35+ students in open-source development
-      - Improved job search workflows across 38+ repositories for 2000+ engineers
+* **[IsoCourt](https://github.com/Navneethd8/IsoCourt)** — AI-native badminton coach using CNN-LSTM + Gemini. Real-time stroke recognition, pose estimation, and coaching feedback from raw video.
+* **[Eat Together](https://github.com/eat-together-team/eat-together)** — Leading a team of 18 to build a community platform connecting people over meals (550+ users, React Native + GCP)
+* **SWECC Labs** — Mentoring 35+ students in open-source development across 38+ repos
 
-  - role: Director
-    organization: Eat Together
-    duration: Dec 2024 – Present
-    impact:
-      - Led a team of 18 to ship features for 550+ users
-      - Built recommendation systems and community tooling
-      - Reduced code review time by 20% through structured feedback
-      - Mentored 20+ developers in React Native, Git, and GCP
+---
 
-  - role: Software Engineer
-    organization: Eat Together
-    duration: Jan 2024 – Dec 2024
-    impact:
-      - Developed media gallery features using React Native
-      - Integrated Firebase storage for scalable image handling
-      - Scaled app to 400+ users through performance optimization
-      - Resolved 35+ UI bugs and 8+ critical issues
+# Experience
 
-projects:
-  - name: DataMed
-    stack: [Python, Scikit-learn, Optuna, Matplotlib, Seaborn]
-    highlights:
-      - Modeled healthcare costs on 1.2M records with 99% data retention
-      - Feature engineered categorical variables for ML readiness
-      - Tuned models with Optuna to improve prediction accuracy
-      - 3rd place – Best ML Model (6th DubsTech Datathon)
-    repo: https://github.com/AdamSkog/Datathon-DataMed
+| Role                | Where        | Impact                                                                                                             |
+| ------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------ |
+| Data Science Intern | FlyDubai     | Flight delay models on 600k+ rows (R²≈0.80), 30% sentiment accuracy boost via prompt engineering on Amazon Bedrock |
+| Director            | Eat Together | Shipped recommendation systems, reduced code review time 20%, scaled to 550+ users                                 |
+| Software Engineer   | SWECC        | Led Labs division, improved job search workflows for 2000+ engineers                                               |
 
-  - name: Macro Scope
-    stack: [Scikit-learn, Pandas, XGBoost, GeoPandas]
-    highlights:
-      - Processed 400k+ IMF records for macroeconomic analysis
-      - Visualized trends across fiscal and inflation indicators
-      - Reduced RMSE by 20% using grid search and cross-validation
-    repo: https://github.com/Navneethd8/macro-indicators
+---
 
-  - name: NCAA Basketball Analysis
-    stack: [R, ggplot2, dplyr]
-    highlights:
-      - Analyzed 20 years of NCAA basketball data (300k+ rows)
-      - Found 25% correlation between free throws and tournament wins
-    repo: https://github.com/Navneethd8/march-madness-analysis
+# Stack
 
-interests:
-  - machine learning
-  - data-driven systems
-  - developer tooling
-  - open source
-  - mentoring
+**Languages:** Python · Java · JavaScript · SQL · R · HTML/CSS
+**ML/DS:** Scikit-learn · TensorFlow · XGBoost · LightGBM · Pandas · NumPy · GeoPandas
+**Web:** React · Node.js · Svelte · React Native
+**Cloud/Tools:** AWS (Lambda, S3, EC2, Amplify) · GCP · Firebase · Docker · Azure DevOps
 
-contact:
-  email: navneethd8@gmail.com
-  github: https://github.com/Navneethd8
-  linkedin: https://linkedin.com/in/navneethd
-  website: https://navneeth.vercel.app
+---
 
-mood: caffeinated ☕
-editor: VS Code
+# Selected Projects
+
+**IsoCourt** — CNN-LSTM + Gemini coaching platform for badminton. ResNet-50 feature extraction, MediaPipe pose estimation, sliding window pipeline. [repo](https://github.com/Navneethd8/IsoCourt) · [live](https://isocourt.fit)
+
+**DataMed** — Healthcare cost modeling on 1.2M records. Optuna hyperparameter tuning. **3rd place — DubsTech Datathon (Best ML Model)**. [repo](https://github.com/AdamSkog/Datathon-DataMed)
+
+**Macro Scope** — IMF macroeconomic analysis on 400k+ records. XGBoost + grid search CV reduced RMSE by 20%. [repo](https://github.com/Navneethd8/macro-indicators)
+
+**NCAA Basketball Analysis** — 20 years of data (300k+ rows), found 25% correlation between free throws and tournament wins. [repo](https://github.com/Navneethd8/march-madness-analysis)
+
+---
+
+# Let's Connect
+
+[LinkedIn](https://linkedin.com/in/navneethd) · [Portfolio](https://navneethd.me) · [Email](mailto:navneethd8@gmail.com)
+
+---
+
+_Open to Data Science / Data Engineering / SWE internships and new grad ro

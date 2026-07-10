@@ -98,6 +98,8 @@ def main() -> None:
         "dark_mode.svg",
         "header_light.svg",
         "header_dark.svg",
+        "navneeth_light.svg",
+        "navneeth_dark.svg",
     ):
         path = root / name
         if path.exists():

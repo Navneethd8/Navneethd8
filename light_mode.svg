@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" font-family="Consolas, Menlo, monospace" width="985px" height="530px" font-size="16px">
 <style>
 text, tspan { white-space: pre; }
@@ -10,30 +10,30 @@ text, tspan { white-space: pre; }
 </style>
 <rect width="985px" height="530px" fill="#f6f8fa" rx="15"/>
 <text x="15" y="30" fill="#24292f" class="ascii">
-<tspan x="15" y="30">                       MO0Qd                    </tspan>
-<tspan x="15" y="50">                     Unj*tjxz#                  </tspan>
-<tspan x="15" y="70">                    X)}{(|}1\nQ                 </tspan>
-<tspan x="15" y="90">                   J(}[?_-)-}(/C                </tspan>
-<tspan x="15" y="110">                  Z|)1~&gt;!:!-&lt;1|/m               </tspan>
-<tspan x="15" y="130">                  f{+" ^    ,,&lt;-1               </tspan>
-<tspan x="15" y="150">                 J(&gt;" "`",^    &gt;?C              </tspan>
-<tspan x="15" y="170">                 v+   `^ ^;    ^+r              </tspan>
-<tspan x="15" y="190">                Z*;^            ^(k             </tspan>
-<tspan x="15" y="210">                u}^              !r             </tspan>
-<tspan x="15" y="230">               Q\+                ~             </tspan>
-<tspan x="15" y="250">               u?;      `&gt;+I      ,u            </tspan>
-<tspan x="15" y="270">               \I     `_rzzj}^     )            </tspan>
-<tspan x="15" y="290">              L~   ^;-|YZpwwQ/,  ` 1M           </tspan>
-<tspan x="15" y="310">              f   ^_tUOdkahahm\   ;/L           </tspan>
-<tspan x="15" y="330">              ]   &gt;rwkko**o*obC} ^:?Y           </tspan>
-<tspan x="15" y="350">             U&lt;  l*Oo*o#**o*abZx^Ii!vM          </tspan>
-<tspan x="15" y="370">             j;  tYhWM#*oaoakp0/ "!+td          </tspan>
-<tspan x="15" y="390">             }  ,YkM&amp;&amp;WMooahkdZ*: `I{Q          </tspan>
-<tspan x="15" y="410">             &lt;  \oMW88&amp;&amp;MM#ohbdc,   +c          </tspan>
-<tspan x="15" y="430">             i  U@M&amp;%88&amp;WWWMokkJi   _Y          </tspan>
-<tspan x="15" y="450">             !  O@8%%88&amp;WW&amp;&amp;MabO}   ic          </tspan>
-<tspan x="15" y="470">             l  k$B@%8WMM#M88Mkp1   ,j          </tspan>
-<tspan x="15" y="490">             l ;*&amp;ZYvw*M#obmpbad)   ^*          </tspan>
+<tspan x="15" y="30">                 ▒▓▓▓▓▓▓▒▒▒▒    ▒               </tspan>
+<tspan x="15" y="50">                ▒▓▓▓▓▓▓▓▓▓▒▒░   ░               </tspan>
+<tspan x="15" y="70">                ▓▓▓▓▓▓▓▓▓▓▓▒▒                   </tspan>
+<tspan x="15" y="90">                ▓░   ▒▒▒   ▒▒                   </tspan>
+<tspan x="15" y="110">                ▒░░         ░░                  </tspan>
+<tspan x="15" y="130">                ░    ▓█                         </tspan>
+<tspan x="15" y="150">              ▓ ▓▓▒▒▓█▓░▒  ░▒░  ░               </tspan>
+<tspan x="15" y="170">             ▒▒▓▓▓▓▓▓█▓▒▓▓▓▓▒▒ ░▒▓              </tspan>
+<tspan x="15" y="190">             ▒▓▓█▓░▓█▓▓▓▓░▒▓▓▒ ▒░▒              </tspan>
+<tspan x="15" y="210">              ▒▓▓▒░▒▒▒░ ░░▒▒▒▒░▒░▒              </tspan>
+<tspan x="15" y="230">              ▓▓▒░░▒▒░ ▒▒░░▒▒▒▒▒▒               </tspan>
+<tspan x="15" y="250">              ▓▓▒░ ░░░░░░  ░▒▒▒▒▒               </tspan>
+<tspan x="15" y="270">               ▓▒▒▒▒▒▒░░░  ░░░▒▒                </tspan>
+<tspan x="15" y="290">               ▓▒▒▒▒░   ░░ ░░░▒                 </tspan>
+<tspan x="15" y="310">                ▒▒▓▓▓▒▒▓▒░░  ▒                  </tspan>
+<tspan x="15" y="330">                 ▒▓▓▓▒▒▒▒░   ▒                  </tspan>
+<tspan x="15" y="350">                 ▒░░        ░░                  </tspan>
+<tspan x="15" y="370">              ▒▒▒▒▒         ░ ░                 </tspan>
+<tspan x="15" y="390">              ░   ▒▒          ░▒░▒░             </tspan>
+<tspan x="15" y="410">              ░   ▒▒░             ▒             </tspan>
+<tspan x="15" y="430">               ▒  ░▒░             ░▓            </tspan>
+<tspan x="15" y="450">               ▒   ░░            ░▒▒▒▒▒▒▒   ▒▒░ </tspan>
+<tspan x="15" y="470">                ░  ░░              ░░░▒        ▒</tspan>
+<tspan x="15" y="490">             ▓▓▒▒   ░                           </tspan>
 </text>
 <text x="390" y="30" fill="#24292f">
 <tspan x="390" y="30">navneeth@uw</tspan> -———————————————————————————————————————————-—-
@@ -54,8 +54,8 @@ text, tspan { white-space: pre; }
 <tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">Seattle, WA</tspan>
 <tspan x="390" y="390" class="cc">. </tspan>
 <tspan x="390" y="410">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
-<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .. </tspan><tspan class="value" id="repo_data">32</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">10</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> .......... </tspan><tspan class="value" id="star_data">0</tspan>
-<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ............ </tspan><tspan class="value" id="commit_data">1,335</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ...... </tspan><tspan class="value" id="follower_data">4</tspan>
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Account Age</tspan>:<tspan class="cc" id="age_data_dots"> </tspan><tspan class="value" id="age_data">4 years, 8 months, 7 days</tspan>
+<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">0</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
+<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ................. </tspan><tspan class="value" id="commit_data">0</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
+<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Account Age</tspan>:<tspan class="cc" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
 </text>
 </svg>

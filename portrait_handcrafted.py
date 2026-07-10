@@ -10,6 +10,16 @@ CANVAS_WIDTH = 48
 CANVAS_HEIGHT = 25
 PHOTO_CUTOUT = Path(__file__).resolve().parent / "assets" / "navneeth-cutout.png"
 TONES = "@$&MGLl;:,. "
+PLAIN_SHIRT = [
+    "            ;lLLLLLLl;                         ",
+    "            L;      ;L                         ",
+    "        ,;lLL; ,----, ;LLl;,                   ",
+    "      ;lLLLLL; '----' ;LLLLLl;                 ",
+    "   ;lLLLLLLLLLl;,,;lLLLLLLLLLl;                ",
+    " ,lLLLLLLLLLLLLLLLLLLLLLLLLLLLLl,              ",
+    ";LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL;             ",
+    "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL              ",
+]
 
 # Coordinates are measured from navneeth_dhamotharan.jpeg after detecting the
 # face at (248, 316, 220, 220) and eyes at y=404.  Keeping these explicit
@@ -80,20 +90,15 @@ def _photo_density_lines() -> list[str]:
         raise FileNotFoundError(f"Missing portrait cutout: {PHOTO_CUTOUT}")
 
     source = Image.open(PHOTO_CUTOUT).convert("RGBA")
-    # Two crops retain more facial samples than squeezing the entire torso into
-    # 25 rows.  Their overlap is the high jacket collar visible in the photo.
+    # Preserve the photo-derived head, then use a plain crew-neck shirt below it
+    # so the source photo's jacket does not appear in the portrait.
     head = source.crop((55, 4, 265, 190)).resize(
         (34, 17),
-        Image.Resampling.LANCZOS,
-    )
-    torso = source.crop((0, 155, 320, 325)).resize(
-        (37, 8),
         Image.Resampling.LANCZOS,
     )
 
     sample = Image.new("RGBA", (CANVAS_WIDTH, CANVAS_HEIGHT), (255, 255, 255, 0))
     sample.alpha_composite(head, (4, 0))
-    sample.alpha_composite(torso, (0, 17))
 
     composite = Image.new("RGBA", sample.size, "white")
     composite.alpha_composite(sample)
@@ -117,6 +122,7 @@ def _photo_density_lines() -> list[str]:
     # hair, face shading, jaw, smile, collar, and body.
     lines[7] = _overlay(lines[7], 9, ",&$G|l@&l|--|l@&l|G@@@&")
     lines[8] = _overlay(lines[8], 9, ",&$G'&&$'    '$&&'MM$@@&")
+    lines[17:25] = PLAIN_SHIRT
     return lines
 
 

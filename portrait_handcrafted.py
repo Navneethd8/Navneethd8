@@ -9,17 +9,19 @@ from __future__ import annotations
 #   - wide shoulder base
 #
 # Navneeth retunes:
-#   - hair: short neat crown, swept right — dense @/$ block, no wispy ;;,, flyaways
+#   - hair: short neat crown, slight right sweep — textured @/$ mix,
+#     clean hairline into face (Andrew's **'''|| open), no wispy flyaways,
+#     not a solid helmet blob
 #   - glasses brow .======. woven into line 8 void
 #   - lens dots .  . kept inside dense line 9 (not an empty box)
 #   - smile ~~~~~ instead of TTTTT on the mouth band
 #   - bag strap #\\ on torso
 HANDCRAFTED_BUST: list[str] = [
-    "            ,g@@@@@@@@gy,                       ",
-    "         ,@@@@@@@@@@@@@@@$,                     ",
-    "        $@@@@@@@@@@@@@@@@@$$k                   ",
-    "       $$@@@@B@@@@@@@B@@@@@$$g                  ",
-    "     g@@@M**''''||%@@@@@$@@@@@@@L$&             ",
+    "             ,g@@@@@$gy,                        ",
+    "          ,@@@@@l&$$$@|@@@,                     ",
+    "         $@@@@@@@$@@@@@@@$$MW                   ",
+    "        $$@@@@B@@@@@@@B@@@@$$g                  ",
+    "      g@llM**'''||%@@@@@$@@@@@@@L$&             ",
     "   @$&$F         ''T%M$@@@@@@@@@@@$@$@          ",
     "  @@@@F              ']@@@@@@$$@$@@@@           ",
     "  @@@$L    .======.   |$@@@$$l$@@@@$F           ",

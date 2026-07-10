@@ -1,22 +1,30 @@
-"""Original ASCII bust for Navneeth — Andrew6rant proportions, not his face."""
+"""ASCII bust — keep Andrew's dense face technique; retune cues for Navneeth."""
 
 from __future__ import annotations
 
-# 25 × 48 — match Andrew's silhouette balance:
-# open face void, hair as a rim (not a solid hood), wide shoulders.
-# Navneeth cues: short neat hair, glasses as a thin brow bar, soft smile,
-# quilted jacket, diagonal strap. No emoji eyes / dash-eye Sith look.
+# Technique from Andrew6rant (do not strip this):
+#   - dense hair rim + open face void
+#   - face is NOT blank: mid-face uses ,@@$ / gg@|| / Wl||| texture
+#   - mouth band uses '"*....'F style shading
+#   - wide shoulder base
+#
+# Navneeth retunes only a few face-zone glyphs:
+#   - glasses brow .======. woven into line 8 void
+#   - lens dots .  . kept inside dense line 9 (not an empty box)
+#   - smile ~~~~~ instead of TTTTT on the mouth band
+#   - short-hair crown (slightly less wispy top)
+#   - bag strap #\\ on torso
 HANDCRAFTED_BUST: list[str] = [
-    "            ;;,,  ,;|g;~,,                      ",
-    "         ,g@@@@@@l&$$$@|,w$$gy,                 ",
-    "        $@@@@@@@@@@$@@@@@@@$$MW$k               ",
-    "       $$@@@@@@B@@@@@@@@@@@$@$$g,$              ",
-    "     g@llM**'''||%@@@@@$@@$@@@@@@L$&            ",
-    "   @$&$F         ''T%M$@@@@@@@@@@$@$@           ",
+    "             ,;;,, ,;||,~,,                     ",
+    "         ,g@@@@@@l&$$$@|,w$$@gy,                ",
+    "        $@@@@@@@@@@$@@@@@@@@$$MW$k              ",
+    "       $$@@@@@@B@@@@@@@@@@@@@$@$$g,$            ",
+    "     g@llM**'''||%@@@@@$@@$@@@@@@@L$&           ",
+    "   @$&$F         ''T%M$@@@@@@@@@@@$@$@          ",
     "  @@@@F              ']@@@@@@$$@$@@@@           ",
-    "  @@@$L     ,------,  |$@@@$$l$@@@@$F           ",
-    " ]@@@@L ,@@$ '----'  ,l@$$$$$$$$$@@@@@          ",
-    "  %$@@@$}',,gg@||@@@@l@g@ggg|l$&$@@$            ",
+    "  @@@$L    .======.   |$@@@$$l$@@@@$F           ",
+    " ]@@@@L ,@@$ .  . L  ,l@$$$$$$$$@@@@@           ",
+    "  %$@@@$}',,=======@@@@l@g@ggg|l$&$@@$          ",
     "  ]@@@@@'\"*~~~~~'F  ]Wl|||''\"'$]@@@@            ",
     "   $$@M$       ,#    ]gg,,,,,.r'$@$             ",
     "    &$L        ' ,, ,,,'T''`    $$L             ",

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,Menlo,monospace" width="985px" height="530px" font-size="16px">
 <style>
 @font-face {
@@ -21,23 +21,23 @@ text, tspan { white-space: pre; }
 <tspan x="15" y="50">             ;M&amp;&amp;&amp;&amp;$$$$$&amp;&amp;Ml                    </tspan>
 <tspan x="15" y="70">           :G&amp;$$@@@@@@@@@@@$M:                  </tspan>
 <tspan x="15" y="90">          l&amp;$@$$&amp;&amp;MGGGGM&amp;$@@@$;                 </tspan>
-<tspan x="15" y="110">         l$@$&amp;Gl;;;;;;;;lL&amp;$$&amp;M;                </tspan>
-<tspan x="15" y="130">        ,$@$l::,:::;;::;;lG$@$$G                </tspan>
-<tspan x="15" y="150">        :$@G:lLLL;::;lLLLll&amp;@@@&amp;                </tspan>
+<tspan x="15" y="110">         l$@$&amp;G          L&amp;$$&amp;M;                </tspan>
+<tspan x="15" y="130">        ,$@$              G$@$$G                </tspan>
+<tspan x="15" y="150">        :$@G  LLL    lLLL  &amp;@@@&amp;                </tspan>
 <tspan x="15" y="170">        ,,&amp;$G|l@&amp;l|--|l@&amp;l|G@@@&amp;                </tspan>
-<tspan x="15" y="190">        ,,&amp;$G'&amp;&amp;$'    '$&amp;&amp;'MM$@@&amp;               </tspan>
-<tspan x="15" y="210">        :LM;:;lll;,:GLLLLlLG&amp;@$M.               </tspan>
-<tspan x="15" y="230">        :l;::lGl;:;llLLl;;l;G&amp;LL:               </tspan>
-<tspan x="15" y="250">         l:;LML;LGMMMLGGLl;lLGLL,               </tspan>
-<tspan x="15" y="270">         ,;;L&amp;MLLGMGGGM&amp;GLLLLll,                </tspan>
-<tspan x="15" y="290">          :llLLlLGMMMMMMGGLGL;,                 </tspan>
-<tspan x="15" y="310">           :ll;;;LLLLLLLGGGM:                   </tspan>
-<tspan x="15" y="330">            :ll;llLLLLGGM&amp;ML                    </tspan>
+<tspan x="15" y="190">        ,,&amp;$G&#x27;&amp;&amp;$&#x27;    &#x27;$&amp;&amp;&#x27;MM$@@&amp;               </tspan>
+<tspan x="15" y="210">        :LM     l   GLLLLlLG&amp;@$M.               </tspan>
+<tspan x="15" y="230">        :     Gl     LL     G&amp;LL:               </tspan>
+<tspan x="15" y="250">         l  LML LGMMMLGGL   LGLL,               </tspan>
+<tspan x="15" y="270">         ,  L&amp;MLLGMGGGM&amp;GLLLL l,                </tspan>
+<tspan x="15" y="290">          : lLLlLGMMMMMMGGLGL;,                 </tspan>
+<tspan x="15" y="310">           :l    LLLLLLLGGGM:                   </tspan>
+<tspan x="15" y="330">            :l   lLLLLGGM&amp;ML                    </tspan>
 <tspan x="15" y="350">          ,, lGM&amp;&amp;&amp;$$$$$$&amp;GGl                   </tspan>
 <tspan x="15" y="370">            ;lLLLLLLl;                          </tspan>
 <tspan x="15" y="390">            L;      ;L                          </tspan>
 <tspan x="15" y="410">        ,;lLL; ,----, ;LLl;,                    </tspan>
-<tspan x="15" y="430">      ;lLLLLL; '----' ;LLLLLl;                  </tspan>
+<tspan x="15" y="430">      ;lLLLLL; &#x27;----&#x27; ;LLLLLl;                  </tspan>
 <tspan x="15" y="450">   ;lLLLLLLLLLl;,,;lLLLLLLLLLl;                 </tspan>
 <tspan x="15" y="470"> ,lLLLLLLLLLLLLLLLLLLLLLLLLLLLLl,               </tspan>
 <tspan x="15" y="490">;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL;              </tspan>
@@ -62,8 +62,8 @@ text, tspan { white-space: pre; }
 <tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">Seattle, WA</tspan>
 <tspan x="390" y="390" class="cc">. </tspan>
 <tspan x="390" y="410">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
-<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .. </tspan><tspan class="value" id="repo_data">32</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">10</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> .......... </tspan><tspan class="value" id="star_data">0</tspan>
-<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ............ </tspan><tspan class="value" id="commit_data">1,361</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ...... </tspan><tspan class="value" id="follower_data">4</tspan>
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Account Age</tspan>:<tspan class="cc" id="age_data_dots"> </tspan><tspan class="value" id="age_data">4 years, 8 months, 7 days</tspan>
+<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">0</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
+<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ................. </tspan><tspan class="value" id="commit_data">0</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
+<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Account Age</tspan>:<tspan class="cc" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
 </text>
 </svg>

@@ -4,12 +4,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 
 CANVAS_WIDTH = 48
 CANVAS_HEIGHT = 25
 PHOTO_CUTOUT = Path(__file__).resolve().parent / "assets" / "navneeth-cutout.png"
-TONES = "@$&MGLl;:,. "
+TONES = " .,:;lLGM&$@"
 
 # Coordinates are measured from navneeth_dhamotharan.jpeg after detecting the
 # face at (248, 316, 220, 220) and eyes at y=404.  Keeping these explicit
@@ -80,43 +80,78 @@ def _photo_density_lines() -> list[str]:
         raise FileNotFoundError(f"Missing portrait cutout: {PHOTO_CUTOUT}")
 
     source = Image.open(PHOTO_CUTOUT).convert("RGBA")
-    # Two crops retain more facial samples than squeezing the entire torso into
-    # 25 rows.  Their overlap is the high jacket collar visible in the photo.
-    head = source.crop((55, 4, 265, 190)).resize(
-        (34, 17),
-        Image.Resampling.LANCZOS,
-    )
-    torso = source.crop((0, 155, 320, 325)).resize(
-        (37, 8),
-        Image.Resampling.LANCZOS,
-    )
 
-    sample = Image.new("RGBA", (CANVAS_WIDTH, CANVAS_HEIGHT), (255, 255, 255, 0))
-    sample.alpha_composite(head, (4, 0))
-    sample.alpha_composite(torso, (0, 17))
+    def sparse_ink(crop: Image.Image, size: tuple[int, int], threshold: int) -> Image.Image:
+        rgb = crop.convert("RGB")
+        gray = ImageOps.grayscale(rgb)
+        ycbcr = rgb.convert("YCbCr")
+        alpha = crop.getchannel("A")
+        edges = gray.filter(ImageFilter.FIND_EDGES)
+        ink = Image.new("L", crop.size)
 
-    composite = Image.new("RGBA", sample.size, "white")
-    composite.alpha_composite(sample)
-    gray = ImageOps.autocontrast(ImageOps.grayscale(composite), cutoff=1)
-    alpha = sample.getchannel("A")
+        values: list[int] = []
+        for gray_value, (_, cb, cr), alpha_value, edge_value in zip(
+            gray.getdata(),
+            ycbcr.getdata(),
+            alpha.getdata(),
+            edges.getdata(),
+        ):
+            if alpha_value < 40:
+                values.append(0)
+                continue
+            is_skin = (
+                75 < cb < 135
+                and 130 < cr < 180
+                and gray_value > 45
+            )
+            darkness = 0 if is_skin else max(0, min(255, (threshold - gray_value) * 3))
+            edge_ink = int(edge_value * 0.55)
+            values.append(max(darkness, edge_ink))
+
+        ink.putdata(values)
+        return ink.resize(size, Image.Resampling.LANCZOS)
+
+    # Give the face 19 rows instead of compressing the entire subject into one
+    # sample.  The skin mask leaves face color to the SVG background.
+    head = sparse_ink(source.crop((45, 0, 275, 220)), (36, 19), threshold=105)
+    torso = sparse_ink(source.crop((0, 155, 320, 325)), (38, 6), threshold=115)
+    sample = Image.new("L", (CANVAS_WIDTH, CANVAS_HEIGHT))
+    sample.paste(head, (4, 0))
+    sample.paste(torso, (0, 19))
 
     lines: list[str] = []
     for y in range(CANVAS_HEIGHT):
         chars: list[str] = []
         for x in range(CANVAS_WIDTH):
-            if alpha.getpixel((x, y)) < 32:
+            value = sample.getpixel((x, y))
+            if value < 12:
                 chars.append(" ")
                 continue
-            value = (gray.getpixel((x, y)) / 255) ** 0.9
-            index = min(len(TONES) - 1, int(value * (len(TONES) - 1)))
+            index = min(len(TONES) - 1, int(value / 255 * (len(TONES) - 1)))
             chars.append(TONES[index])
         lines.append("".join(chars))
 
-    # The actual glasses are the defining landmark but lose their frame during
-    # 34×17 sampling.  Reinforce only that edge, preserving the photographed
-    # hair, face shading, jaw, smile, collar, and body.
-    lines[7] = _overlay(lines[7], 9, ",&$G|l@&l|--|l@&l|G@@@&")
-    lines[8] = _overlay(lines[8], 9, ",&$G'&&$'    '$&&'MM$@@&")
+    # Clarify features without filling the skin region.  The pupils share one
+    # literal row, while the frames use organic density instead of box glyphs.
+    lines[7] = _overlay(lines[7], 7, ",g@@@L ,l@@L--L@@l, L@@@g,")
+    lines[8] = _overlay(lines[8], 8, "'$@@@l    .    .    l@@@$'")
+    lines[9] = _overlay(lines[9], 18, ",||,")
+    lines[10] = _overlay(lines[10], 19, "||")
+    lines[12] = _overlay(lines[12], 15, "',------,'")
+
+    # Preserve the clean outer jaw border while leaving its interior blank.
+    for row, left, right in (
+        (11, 8, 34),
+        (12, 9, 33),
+        (13, 10, 32),
+        (14, 11, 31),
+        (15, 12, 30),
+    ):
+        chars = list(lines[row])
+        chars[left] = "L"
+        chars[right] = "L"
+        lines[row] = "".join(chars)
+    lines[16] = _overlay(lines[16], 14, "'----------'")
     return lines
 
 

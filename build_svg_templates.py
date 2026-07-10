@@ -35,7 +35,7 @@ def terminal_body() -> str:
 <tspan x="28" y="568" class="label">account age</tspan><tspan class="muted" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
 
 <tspan x="28" y="610" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">echo $CONTACT</tspan>
-<tspan x="28" y="640" class="output">github.com/Navneethd8  ·  navneethd8.github.io  ·  Seattle, WA</tspan>
+<tspan x="28" y="640" class="output">github.com/Navneethd8  ·  navneethd.me  ·  Seattle, WA</tspan>
 </text>
 <rect x="28" y="662" width="10" height="3" class="cursor"/>"""
 

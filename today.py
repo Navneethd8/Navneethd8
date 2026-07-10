@@ -93,37 +93,8 @@ def update_svg(path: Path, stats: dict[str, str]) -> None:
 def main() -> None:
     stats = fetch_stats()
     root = Path(__file__).resolve().parent
-    for name in (
-        "level_light.svg",
-        "level_dark.svg",
-        "eyes_light.svg",
-        "eyes_dark.svg",
-        "trim_light.svg",
-        "trim_dark.svg",
-        "clean_light.svg",
-        "clean_dark.svg",
-        "style_light.svg",
-        "style_dark.svg",
-        "hair_light.svg",
-        "hair_dark.svg",
-        "face_light.svg",
-        "face_dark.svg",
-        "light_mode.svg",
-        "dark_mode.svg",
-        "header_light.svg",
-        "header_dark.svg",
-        "navneeth_light.svg",
-        "navneeth_dark.svg",
-        "bust_light.svg",
-        "bust_dark.svg",
-        "me_light.svg",
-        "me_dark.svg",
-        "stats_light.svg",
-        "stats_dark.svg",
-    ):
-        path = root / name
-        if path.exists():
-            update_svg(path, stats)
+    for name in ("light_mode.svg", "dark_mode.svg"):
+        update_svg(root / name, stats)
     print("Updated profile SVG stats.")
 
 

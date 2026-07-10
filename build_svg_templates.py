@@ -4,11 +4,63 @@
 from __future__ import annotations
 
 import html
+import os
 from pathlib import Path
 
-from portrait_handcrafted import build_handcrafted_bust
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-OUT_DIR = Path(__file__).resolve().parent / "profile-svg"
+from portrait_handcrafted import build_handcrafted_bust, build_outline_bust
+
+ROOT = Path(__file__).resolve().parent
+OUT_DIR = Path(os.environ.get("PROFILE_OUT_DIR", ROOT / "profile-svg"))
+PREVIEW_DIR = ROOT / "profile-svg"
+REFERENCE = Path("/Users/navneeth/Desktop/navneeth_dhamotharan.jpeg")
+PANEL_WIDTH = 390
+PANEL_HEIGHT = 530
+FONT_SIZE = 16
+LINE_HEIGHT = 20
+
+
+def load_font(size: int = FONT_SIZE) -> ImageFont.FreeTypeFont:
+    candidates = (
+        "/System/Library/Fonts/Menlo.ttc",
+        "/System/Library/Fonts/SFNSMono.ttf",
+        "/Library/Fonts/SF-Mono-Regular.otf",
+    )
+    for candidate in candidates:
+        if Path(candidate).exists():
+            return ImageFont.truetype(candidate, size=size)
+    raise FileNotFoundError("No supported monospace font found")
+
+
+def render_portrait_png(lines: list[str], output: Path) -> Image.Image:
+    image = Image.new("RGB", (PANEL_WIDTH, PANEL_HEIGHT), "#f6f8fa")
+    draw = ImageDraw.Draw(image)
+    font = load_font()
+    for index, line in enumerate(lines):
+        draw.text(
+            (15, 14 + index * LINE_HEIGHT),
+            line,
+            fill="#24292f",
+            font=font,
+        )
+    image.save(output)
+    return image
+
+
+def render_comparison(portrait: Image.Image, output: Path) -> None:
+    reference = Image.open(REFERENCE).convert("RGB")
+    # Match the source framing used for the ASCII bust: hair through shoulders.
+    reference = reference.crop((190, 250, 610, 800))
+    reference = ImageOps.fit(
+        reference,
+        (PANEL_WIDTH, PANEL_HEIGHT),
+        method=Image.Resampling.LANCZOS,
+    )
+    comparison = Image.new("RGB", (PANEL_WIDTH * 2, PANEL_HEIGHT), "white")
+    comparison.paste(reference, (0, 0))
+    comparison.paste(portrait, (PANEL_WIDTH, 0))
+    comparison.save(output)
 
 
 def ascii_tspans(lines: list[str], x: int = 15, start_y: int = 30, line_height: int = 20) -> str:
@@ -88,9 +140,22 @@ text, tspan {{ white-space: pre; }}
 
 def main() -> None:
     lines = build_handcrafted_bust()
+    outline = build_outline_bust()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "light_mode.svg").write_text(build_svg("light", lines), encoding="utf-8")
     (OUT_DIR / "dark_mode.svg").write_text(build_svg("dark", lines), encoding="utf-8")
+    (PREVIEW_DIR / "outline_preview.svg").write_text(
+        build_svg("light", outline),
+        encoding="utf-8",
+    )
+    render_portrait_png(outline, PREVIEW_DIR / "outline_preview.png")
+    portrait = render_portrait_png(lines, PREVIEW_DIR / "portrait_preview.png")
+    render_comparison(portrait, PREVIEW_DIR / "portrait_comparison.png")
+    portrait.resize(
+        (PANEL_WIDTH // 2, PANEL_HEIGHT // 2),
+        Image.Resampling.LANCZOS,
+    ).save(PREVIEW_DIR / "portrait_thumbnail.png")
     print(f"Wrote templates to {OUT_DIR}")
 
 

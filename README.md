@@ -1,6 +1,9 @@
-# Hey, I'm Navneeth
-
-
+<a href="https://github.com/Navneethd8/Navneethd8">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
+    <img alt="Navneeth's GitHub Profile" src="light_mode.svg">
+  </picture>
+</a>
 
 **Data Science + Economics @ UW Seattle** · graduating June 2027
 Building at the intersection of ML, systems, and things that actually ship.

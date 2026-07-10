@@ -23,15 +23,21 @@ def terminal_body() -> str:
 <tspan x="28" y="280" class="output">Python  Java  JavaScript  SQL  R  React  Node.js  Svelte</tspan>
 <tspan x="28" y="304" class="output">TensorFlow  Scikit-learn  XGBoost  React Native</tspan>
 
-<tspan x="28" y="346" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">github-stats --user Navneethd8</tspan>
-<tspan x="28" y="376" class="label">repos</tspan><tspan class="muted" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan><tspan class="muted">    contributed </tspan><tspan class="value" id="contrib_data">0</tspan><tspan class="muted">    stars</tspan><tspan class="muted" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
-<tspan x="28" y="400" class="label">commits</tspan><tspan class="muted" id="commit_data_dots"> ................. </tspan><tspan class="value" id="commit_data">0</tspan><tspan class="muted">    followers</tspan><tspan class="muted" id="follower_data_dots"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
-<tspan x="28" y="424" class="label">account age</tspan><tspan class="muted" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
+<tspan x="28" y="346" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">ls selected-projects --long</tspan>
+<tspan x="28" y="376" class="label">IsoCourt</tspan><tspan class="muted">        </tspan><tspan class="output">AI badminton coach · CNN-LSTM · Gemini · isocourt.fit</tspan>
+<tspan x="28" y="400" class="label">DataMed</tspan><tspan class="muted">         </tspan><tspan class="output">Healthcare cost ML · 3rd place, DubsTech Datathon</tspan>
+<tspan x="28" y="424" class="label">Macro Scope</tspan><tspan class="muted">     </tspan><tspan class="output">IMF macro analysis · XGBoost · 20% lower RMSE</tspan>
+<tspan x="28" y="448" class="label">March Madness</tspan><tspan class="muted">  </tspan><tspan class="output">20 seasons · 300k+ rows · NCAA tournament analysis</tspan>
 
-<tspan x="28" y="466" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">echo $CONTACT</tspan>
-<tspan x="28" y="496" class="output">github.com/Navneethd8  ·  navneethd8.github.io  ·  Seattle, WA</tspan>
+<tspan x="28" y="490" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">github-stats --user Navneethd8</tspan>
+<tspan x="28" y="520" class="label">repos</tspan><tspan class="muted" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan><tspan class="muted">    contributed </tspan><tspan class="value" id="contrib_data">0</tspan><tspan class="muted">    stars</tspan><tspan class="muted" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
+<tspan x="28" y="544" class="label">commits</tspan><tspan class="muted" id="commit_data_dots"> ................. </tspan><tspan class="value" id="commit_data">0</tspan><tspan class="muted">    followers</tspan><tspan class="muted" id="follower_data_dots"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
+<tspan x="28" y="568" class="label">account age</tspan><tspan class="muted" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
+
+<tspan x="28" y="610" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">echo $CONTACT</tspan>
+<tspan x="28" y="640" class="output">github.com/Navneethd8  ·  navneethd8.github.io  ·  Seattle, WA</tspan>
 </text>
-<rect x="28" y="510" width="10" height="3" class="cursor"/>"""
+<rect x="28" y="662" width="10" height="3" class="cursor"/>"""
 
 
 def build_svg(mode: str) -> str:
@@ -57,7 +63,7 @@ def build_svg(mode: str) -> str:
         )
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530">
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="680" viewBox="0 0 985 680">
 <style>
 @font-face {{
   font-family: Terminal;
@@ -73,7 +79,7 @@ text, tspan {{ white-space: pre; }}
 .muted {{ fill: {muted}; }}
 .cursor {{ fill: {prompt}; }}
 </style>
-<rect width="985" height="530" rx="12" fill="{bg}" stroke="{border}"/>
+<rect width="985" height="680" rx="12" fill="{bg}" stroke="{border}"/>
 <path d="M12 0h961a12 12 0 0 1 12 12v34H0V12A12 12 0 0 1 12 0z" fill="{bar}"/>
 <line x1="0" y1="46" x2="985" y2="46" stroke="{border}"/>
 <circle cx="22" cy="23" r="6" fill="#ff5f57"/>

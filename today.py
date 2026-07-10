@@ -94,6 +94,8 @@ def main() -> None:
     stats = fetch_stats()
     root = Path(__file__).resolve().parent
     for name in (
+        "trim_light.svg",
+        "trim_dark.svg",
         "clean_light.svg",
         "clean_dark.svg",
         "style_light.svg",

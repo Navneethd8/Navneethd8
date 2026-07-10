@@ -26,8 +26,8 @@ def terminal_body() -> str:
 <tspan x="28" y="346" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">ls selected-projects --long</tspan>
 <tspan x="28" y="376" class="label">IsoCourt</tspan><tspan class="muted">        </tspan><tspan class="output">AI badminton coach · CNN-LSTM · Gemini · isocourt.fit</tspan>
 <tspan x="28" y="400" class="label">DataMed</tspan><tspan class="muted">         </tspan><tspan class="output">Healthcare cost ML · 3rd place, DubsTech Datathon</tspan>
-<tspan x="28" y="424" class="label">Macro Scope</tspan><tspan class="muted">     </tspan><tspan class="output">IMF macro analysis · XGBoost · 20% lower RMSE</tspan>
-<tspan x="28" y="448" class="label">March Madness</tspan><tspan class="muted">  </tspan><tspan class="output">20 seasons · 300k+ rows · NCAA tournament analysis</tspan>
+<tspan x="28" y="424" class="label">Eat Together</tspan><tspan class="muted">    </tspan><tspan class="output">Community meals · React Native · 550+ users</tspan>
+<tspan x="28" y="448" class="label">Mesocosm</tspan><tspan class="muted">        </tspan><tspan class="output">mesocosm.swecc.org · github.com/swecc-uw/mesocosm</tspan>
 
 <tspan x="28" y="490" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">github-stats --user Navneethd8</tspan>
 <tspan x="28" y="520" class="label">repos</tspan><tspan class="muted" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan><tspan class="muted">    contributed </tspan><tspan class="value" id="contrib_data">0</tspan><tspan class="muted">    stars</tspan><tspan class="muted" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>

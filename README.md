@@ -1,11 +1,7 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/assets/navneeth-cutout.png" alt="Navneeth" height="280" />
-</p>
-
 <a href="https://github.com/Navneethd8/Navneethd8">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/stats_dark.svg">
-    <img alt="Navneeth's GitHub Profile Stats" src="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/stats_light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/me_dark.svg">
+    <img alt="Navneeth's GitHub Profile" src="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/me_light.svg">
   </picture>
 </a>
 

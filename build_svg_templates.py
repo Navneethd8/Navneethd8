@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 from portrait_handcrafted import build_handcrafted_bust, build_outline_bust
 
 ROOT = Path(__file__).resolve().parent
-OUT_DIR = Path(os.environ.get("PROFILE_OUT_DIR", ROOT / "profile-svg"))
+OUT_DIR = Path(os.environ.get("PROFILE_OUT_DIR", ROOT))
 PREVIEW_DIR = ROOT / "profile-svg"
 REFERENCE = Path("/Users/navneeth/Desktop/navneeth_dhamotharan.jpeg")
 PANEL_WIDTH = 390
@@ -140,22 +140,23 @@ text, tspan {{ white-space: pre; }}
 
 def main() -> None:
     lines = build_handcrafted_bust()
-    outline = build_outline_bust()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "light_mode.svg").write_text(build_svg("light", lines), encoding="utf-8")
     (OUT_DIR / "dark_mode.svg").write_text(build_svg("dark", lines), encoding="utf-8")
-    (PREVIEW_DIR / "outline_preview.svg").write_text(
-        build_svg("light", outline),
-        encoding="utf-8",
-    )
-    render_portrait_png(outline, PREVIEW_DIR / "outline_preview.png")
-    portrait = render_portrait_png(lines, PREVIEW_DIR / "portrait_preview.png")
-    render_comparison(portrait, PREVIEW_DIR / "portrait_comparison.png")
-    portrait.resize(
-        (PANEL_WIDTH // 2, PANEL_HEIGHT // 2),
-        Image.Resampling.LANCZOS,
-    ).save(PREVIEW_DIR / "portrait_thumbnail.png")
+    if os.environ.get("PROFILE_PREVIEW") == "1":
+        outline = build_outline_bust()
+        PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
+        (PREVIEW_DIR / "outline_preview.svg").write_text(
+            build_svg("light", outline),
+            encoding="utf-8",
+        )
+        render_portrait_png(outline, PREVIEW_DIR / "outline_preview.png")
+        portrait = render_portrait_png(lines, PREVIEW_DIR / "portrait_preview.png")
+        render_comparison(portrait, PREVIEW_DIR / "portrait_comparison.png")
+        portrait.resize(
+            (PANEL_WIDTH // 2, PANEL_HEIGHT // 2),
+            Image.Resampling.LANCZOS,
+        ).save(PREVIEW_DIR / "portrait_thumbnail.png")
     print(f"Wrote templates to {OUT_DIR}")
 
 

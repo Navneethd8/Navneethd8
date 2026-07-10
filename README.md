@@ -1,7 +1,7 @@
 <a href="https://github.com/Navneethd8/Navneethd8">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/eyes_dark.svg">
-    <img alt="Navneeth's GitHub Profile" src="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/eyes_light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/level_dark.svg">
+    <img alt="Navneeth's GitHub Profile" src="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/level_light.svg">
   </picture>
 </a>
 

@@ -11,9 +11,9 @@ from __future__ import annotations
 #
 # Navneeth retunes:
 #   - hair: short neat crown, slight right sweep — textured @/$ mix
-#   - glasses brow .======. ; eyes .  . on the SAME line, even spacing
+#   - two rectangular lenses; pupils share one literal row
 #   - smile ~~~~~ instead of TTTTT
-#   - clean-shaven chin (open center) but KEEP jaw border outline
+#   - clean-shaven chin: open center with only the outer face silhouette
 #   - bag strap #\\ on torso
 #   - from row 5 down: trim 4 trailing content chars
 HANDCRAFTED_BUST: list[str] = [
@@ -24,15 +24,15 @@ HANDCRAFTED_BUST: list[str] = [
     "      g@llM**'''||%@@@@@$@@@@@@                 ",
     "   @$&$F         ''T%M$@@@@@@@@@@@              ",
     "  @@@@F              ']@@@@@@$$@$               ",
-    "  @@@$L    .======.   |$@@@$$l$@@               ",
-    " ]@@@@L ,@@$  .  .  ,l@$$$$$$$$@                ",
-    "  %$@@@$}',,=======@@@@l@g@ggg|l$&              ",
-    "  ]@@@@@'\"*~~~~~'F  ]Wl|||''\"'$]                ",
-    "   $$@M$              ]gg,,,,,.r                ",
-    "    &$L        '          `    $$L              ",
-    "     lL         ',,,,,,,'      l\"'              ",
-    "     ' |                       L `              ",
-    "      ''   '|L--------L|'    L|                 ",
+    "  @@@$L   .----. .----. |$@@@$$l$@@@@$F         ",
+    " ]@@@@L  |  . |-|  . | ,l@$$$$$$$$@@@@@         ",
+    "  %$@@@$} '----' '----'@@l@g@ggg|l$&$@@$        ",
+    "  ]@@@@@'\"*~~~~~'F  ]Wl|||''\"'$]@@@@             ",
+    "   $$@M$       ,#                 '$@$           ",
+    "    &$L                            $$L           ",
+    "     lL                            l\"'           ",
+    "     ' |                          L `            ",
+    "      ''       '------------'    L|              ",
     "        |           ,,                          ",
     "        '         ||||||||                      ",
     "          !      '#\\                           ",

@@ -103,6 +103,7 @@ def _photo_density_lines() -> list[str]:
     composite = Image.new("RGBA", sample.size, "white")
     composite.alpha_composite(sample)
     gray = ImageOps.autocontrast(ImageOps.grayscale(composite), cutoff=1)
+    ycbcr = sample.convert("RGB").convert("YCbCr")
     alpha = sample.getchannel("A")
 
     lines: list[str] = []
@@ -113,6 +114,15 @@ def _photo_density_lines() -> list[str]:
                 chars.append(" ")
                 continue
             value = (gray.getpixel((x, y)) / 255) ** 0.9
+            luminance, cb, cr = ycbcr.getpixel((x, y))
+            is_bright_skin = (
+                luminance > 155
+                and 75 < cb < 135
+                and 130 < cr < 180
+            )
+            if is_bright_skin:
+                chars.append(" ")
+                continue
             index = min(len(TONES) - 1, int(value * (len(TONES) - 1)))
             chars.append(TONES[index])
         lines.append("".join(chars))

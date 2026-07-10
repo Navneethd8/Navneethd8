@@ -8,18 +8,18 @@ from __future__ import annotations
 #   - mouth band uses '"*....'F style shading
 #   - wide shoulder base
 #
-# Navneeth retunes only a few face-zone glyphs:
+# Navneeth retunes:
+#   - hair: short neat crown, swept right — dense @/$ block, no wispy ;;,, flyaways
 #   - glasses brow .======. woven into line 8 void
 #   - lens dots .  . kept inside dense line 9 (not an empty box)
 #   - smile ~~~~~ instead of TTTTT on the mouth band
-#   - short-hair crown (slightly less wispy top)
 #   - bag strap #\\ on torso
 HANDCRAFTED_BUST: list[str] = [
-    "             ,;;,, ,;||,~,,                     ",
-    "         ,g@@@@@@l&$$$@|,w$$@gy,                ",
-    "        $@@@@@@@@@@$@@@@@@@@$$MW$k              ",
-    "       $$@@@@@@B@@@@@@@@@@@@@$@$$g,$            ",
-    "     g@llM**'''||%@@@@@$@@$@@@@@@@L$&           ",
+    "            ,g@@@@@@@@gy,                       ",
+    "         ,@@@@@@@@@@@@@@@$,                     ",
+    "        $@@@@@@@@@@@@@@@@@$$k                   ",
+    "       $$@@@@B@@@@@@@B@@@@@$$g                  ",
+    "     g@@@M**''''||%@@@@@$@@@@@@@L$&             ",
     "   @$&$F         ''T%M$@@@@@@@@@@@$@$@          ",
     "  @@@@F              ']@@@@@@$$@$@@@@           ",
     "  @@@$L    .======.   |$@@@$$l$@@@@$F           ",

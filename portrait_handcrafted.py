@@ -2,34 +2,34 @@
 
 from __future__ import annotations
 
-# 25 lines × 34 cols — fits left panel without overlapping stats at x=390.
-# Based on navneeth_dhamotharan.jpeg: glasses, short hair, warm smile, puffer jacket.
+# Abstract face — no emoji box. Glasses hinted via ,####, brow bar.
+# 25 lines × 34 cols. Structure follows Andrew6rant's organic face shading.
 HANDCRAFTED_BUST: list[str] = [
-    "          ,;,, ,|L|,~,            ",
+    "          ,;;, ,|L|,~,            ",
     "       ,g@@l&$$@|,w$gy,           ",
     "      $@@@@@@@$$$MW$k             ",
     "     $$@@@B@@@@@$$g,$             ",
-    "   g@lM*'||%@@$@@@L$&            ",
-    "  @$F    .---------.   ''T%M      ",
-    " @@F    |  o    o   |      ]@@    ",
-    " @L     |    ~~     |       |$@   ",
-    " ]L      '-----------'    ,l@$    ",
-    "  %$}   *============*  ]Wl||    ",
-    "  ]@'\"    .+------+.     \"|L|     ",
-    "   M$      [#||#]         ]gg,     ",
-    "   &L     -========-     ,,'T      ",
-    "    L      |||||||        `-       ",
-    "    ' |    |||||||        \"|       ",
-    "     ''    +++++++****\"\"*|         ",
-    "       |           ,,       |       ",
-    "       '         ||||||   ||       ",
-    "         !      '#\\         |      ",
-    "          '!,  #||\\     ||,|      ",
-    "           ||l&$@$$MT|||           ",
-    "        |  |||l$ll|||||L           ",
-    "   ,;y     ||||l||@|||l            ",
-    " ,g$@       |||||||||| $g,          ",
-    " $$@     |  |||||||||| |$@         ",
+    "   g@lM*'||%@@$@@@L$&             ",
+    "  @$&$F      ''T%M$@@@@@@@         ",
+    " @@@@F            ']@@@@@$$@       ",
+    " @@@$L    ,####,  |$@@$$l$@       ",
+    " ]@@@@L,@@$@@L,l@$$$$$@@@         ",
+    "  %$@@@$}',gg@|@@l@g@gg|l$&       ",
+    "  ]@@@@@'\"*TTTT'F]Wl|||''\"$]@     ",
+    "   $$@M$     ,#   ]gg,,,.r'$@     ",
+    "    &$L      ' ,,,'T''`   $$L     ",
+    "     lL       T\"||||!  `- l\"'     ",
+    "     ' |      '||l||||\"|L| L`     ",
+    "      ''  '|L++=*****\"\"*\"|| L|    ",
+    "        |          ,,     |||F     ",
+    "        '        |||||||| ||l$     ",
+    "          !    '#\\         |l&    ",
+    "           '!,#||\\    ||,||@M|    ",
+    "            ||l&$@$$MT|||         ",
+    "        |  |||l$ll|||||L          ",
+    "   ,;y    ||||l||@|||l            ",
+    " ,g$@      |||||||||| $g,         ",
+    " $$@    |  |||||||||| |$@g        ",
 ]
 
 CANVAS_WIDTH = 34

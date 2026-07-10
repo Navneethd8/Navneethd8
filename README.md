@@ -1,7 +1,7 @@
 <a href="https://github.com/Navneethd8/Navneethd8">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/dark_mode.svg?v=20260710">
-    <img alt="Navneeth's GitHub Profile" src="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/light_mode.svg?v=20260710">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/dark_mode.svg?v=20260710b">
+    <img alt="Navneeth's GitHub Profile" src="https://raw.githubusercontent.com/Navneethd8/Navneethd8/main/light_mode.svg?v=20260710b">
   </picture>
 </a>
 

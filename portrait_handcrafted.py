@@ -7,17 +7,15 @@ from __future__ import annotations
 #   - face is NOT blank: mid-face uses ,@@$ / gg@|| / Wl||| texture
 #   - mouth band uses '"*....'F style shading
 #   - wide shoulder base
+#   - jaw/chin has a tapering border (even when clean-shaven)
 #
 # Navneeth retunes:
-#   - hair: short neat crown, slight right sweep — textured @/$ mix,
-#     clean hairline into face (Andrew's **'''|| open), no wispy flyaways,
-#     not a solid helmet blob
-#   - glasses brow .======. woven into line 8 void
-#   - lens dots .  . kept inside dense line 9 (not an empty box)
-#   - smile ~~~~~ instead of TTTTT on the mouth band
-#   - clean-shaven chin (open jaw void — no Andrew beard texture)
+#   - hair: short neat crown, slight right sweep — textured @/$ mix
+#   - glasses brow .======. ; eyes .  . on the SAME line, even spacing
+#   - smile ~~~~~ instead of TTTTT
+#   - clean-shaven chin (open center) but KEEP jaw border outline
 #   - bag strap #\\ on torso
-#   - from row 5 down: trim 4 trailing content chars (narrower right edge)
+#   - from row 5 down: trim 4 trailing content chars
 HANDCRAFTED_BUST: list[str] = [
     "             ,g@@@@@$gy,                        ",
     "          ,@@@@@l&$$$@|@@@,                     ",
@@ -27,14 +25,14 @@ HANDCRAFTED_BUST: list[str] = [
     "   @$&$F         ''T%M$@@@@@@@@@@@              ",
     "  @@@@F              ']@@@@@@$$@$               ",
     "  @@@$L    .======.   |$@@@$$l$@@               ",
-    " ]@@@@L ,@@$ .  . L  ,l@$$$$$$$$@               ",
+    " ]@@@@L ,@@$  .  .  ,l@$$$$$$$$@                ",
     "  %$@@@$}',,=======@@@@l@g@ggg|l$&              ",
     "  ]@@@@@'\"*~~~~~'F  ]Wl|||''\"'$]                ",
     "   $$@M$              ]gg,,,,,.r                ",
-    "    &$L                'T''`                    ",
-    "     lL                  `-                     ",
-    "     ' |                                        ",
-    "      ''                 ''                     ",
+    "    &$L        '          `    $$L              ",
+    "     lL         ',,,,,,,'      l\"'              ",
+    "     ' |                       L `              ",
+    "      ''   '|L--------L|'    L|                 ",
     "        |           ,,                          ",
     "        '         ||||||||                      ",
     "          !      '#\\                           ",

@@ -1,69 +1,46 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,Menlo,monospace" width="985px" height="530px" font-size="16px">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530">
 <style>
 @font-face {
-src: local('Consolas'), local('Consolas Bold');
-font-family: 'ConsolasFallback';
-font-display: swap;
--webkit-size-adjust: 109%;
-size-adjust: 109%;
+  font-family: Terminal;
+  src: local('SFMono-Regular'), local('Menlo'), local('Consolas');
 }
 text, tspan { white-space: pre; }
-.key { fill: #953800; }
-.value { fill: #0a3069; }
-.cc { fill: #c2cfde; }
-.addColor { fill: #1a7f37; }
-.delColor { fill: #cf222e; }
+.terminal { font: 15px Terminal, Menlo, Consolas, monospace; fill: #24292f; }
+.prompt { fill: #1a7f37; font-weight: 700; }
+.path { fill: #0969da; font-weight: 700; }
+.command { fill: #8250df; }
+.label { fill: #cf222e; }
+.value, .output { fill: #24292f; }
+.muted { fill: #57606a; }
+.cursor { fill: #1a7f37; }
 </style>
-<rect width="985px" height="530px" fill="#f6f8fa" rx="15"/>
-<text x="15" y="30" fill="#24292f" class="ascii">
-<tspan x="15" y="30">               :lGGGGGGLl:                      </tspan>
-<tspan x="15" y="50">             ;M&amp;&amp;&amp;&amp;$$$$$&amp;&amp;Ml                    </tspan>
-<tspan x="15" y="70">           :G&amp;$$@@@@@@@@@@@$M:                  </tspan>
-<tspan x="15" y="90">          l&amp;$@$$&amp;&amp;MGGGGM&amp;$@@@$;                 </tspan>
-<tspan x="15" y="110">         l$@$&amp;G          L&amp;$$&amp;M;                </tspan>
-<tspan x="15" y="130">        ,$@$              G$@$$G                </tspan>
-<tspan x="15" y="150">        :$@G  LLL    lLLL  &amp;@@@&amp;                </tspan>
-<tspan x="15" y="170">        ,,&amp;$G|l@&amp;l|--|l@&amp;l|G@@@&amp;                </tspan>
-<tspan x="15" y="190">        ,,&amp;$G'&amp;&amp;$'    '$&amp;&amp;'MM$@@&amp;               </tspan>
-<tspan x="15" y="210">        :LM     l   GLLLLlLG&amp;@$M.               </tspan>
-<tspan x="15" y="230">        :     Gl     LL     G&amp;LL:               </tspan>
-<tspan x="15" y="250">         l  LML LGMMMLGGL   LGLL,               </tspan>
-<tspan x="15" y="270">         ,  L&amp;MLLGMGGGM&amp;GLLLL l,                </tspan>
-<tspan x="15" y="290">          : lLLlLGMMMMMMGGLGL;,                 </tspan>
-<tspan x="15" y="310">           :l    LLLLLLLGGGM:                   </tspan>
-<tspan x="15" y="330">            :l   lLLLLGGM&amp;ML                    </tspan>
-<tspan x="15" y="350">          ,, lGM&amp;&amp;&amp;$$$$$$&amp;GGl                   </tspan>
-<tspan x="15" y="370">            ;lLLLLLLl;                          </tspan>
-<tspan x="15" y="390">            L;      ;L                          </tspan>
-<tspan x="15" y="410">        ,;lLL; ,----, ;LLl;,                    </tspan>
-<tspan x="15" y="430">      ;lLLLLL; '----' ;LLLLLl;                  </tspan>
-<tspan x="15" y="450">   ;lLLLLLLLLLl;,,;lLLLLLLLLLl;                 </tspan>
-<tspan x="15" y="470"> ,lLLLLLLLLLLLLLLLLLLLLLLLLLLLLl,               </tspan>
-<tspan x="15" y="490">;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL;              </tspan>
-<tspan x="15" y="510">LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL              </tspan>
+<rect width="985" height="530" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<path d="M12 0h961a12 12 0 0 1 12 12v34H0V12A12 12 0 0 1 12 0z" fill="#eaeef2"/>
+<line x1="0" y1="46" x2="985" y2="46" stroke="#d0d7de"/>
+<circle cx="22" cy="23" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="23" r="6" fill="#febc2e"/>
+<circle cx="62" cy="23" r="6" fill="#28c840"/>
+<text x="492.5" y="28" text-anchor="middle" class="terminal muted">navneeth@uw: ~</text>
+<text class="terminal">
+<tspan x="28" y="82" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">fastfetch --logo none</tspan>
+<tspan x="28" y="112" class="label">user</tspan><tspan class="muted">        </tspan><tspan class="value">Navneeth Dhamotharan</tspan>
+<tspan x="28" y="136" class="label">school</tspan><tspan class="muted">      </tspan><tspan class="value">University of Washington, Seattle</tspan>
+<tspan x="28" y="160" class="label">major</tspan><tspan class="muted">       </tspan><tspan class="value">Data Science + Economics</tspan>
+<tspan x="28" y="184" class="label">graduation</tspan><tspan class="muted">  </tspan><tspan class="value">June 2027</tspan>
+<tspan x="28" y="208" class="label">focus</tspan><tspan class="muted">       </tspan><tspan class="value">ML systems · sports AI · full-stack apps</tspan>
+
+<tspan x="28" y="250" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">cat stack.txt</tspan>
+<tspan x="28" y="280" class="output">Python  Java  JavaScript  SQL  R  React  Node.js  Svelte</tspan>
+<tspan x="28" y="304" class="output">TensorFlow  Scikit-learn  XGBoost  React Native</tspan>
+
+<tspan x="28" y="346" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">github-stats --user Navneethd8</tspan>
+<tspan x="28" y="376" class="label">repos</tspan><tspan class="muted" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan><tspan class="muted">    contributed </tspan><tspan class="value" id="contrib_data">0</tspan><tspan class="muted">    stars</tspan><tspan class="muted" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
+<tspan x="28" y="400" class="label">commits</tspan><tspan class="muted" id="commit_data_dots"> ................. </tspan><tspan class="value" id="commit_data">0</tspan><tspan class="muted">    followers</tspan><tspan class="muted" id="follower_data_dots"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
+<tspan x="28" y="424" class="label">account age</tspan><tspan class="muted" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
+
+<tspan x="28" y="466" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">echo $CONTACT</tspan>
+<tspan x="28" y="496" class="output">github.com/Navneethd8  ·  navneethd8.github.io  ·  Seattle, WA</tspan>
 </text>
-<text x="390" y="30" fill="#24292f">
-<tspan x="390" y="30">navneeth@uw</tspan> -———————————————————————————————————————————-—-
-<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">macOS, Linux</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">School</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">UW Seattle</tspan>
-<tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Major</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">Data Science + Economics</tspan>
-<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Graduation</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">June 2027</tspan>
-<tspan x="390" y="130" class="cc">. </tspan>
-<tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">Python, Java, JavaScript, SQL, R</tspan>
-<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">ML</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">TensorFlow, Scikit-learn, XGBoost</tspan>
-<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Web</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">React, Node.js, Svelte, React Native</tspan>
-<tspan x="390" y="210" class="cc">. </tspan>
-<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Focus</tspan>:<tspan class="cc"> ............... </tspan><tspan class="value">ML systems, sports AI, full-stack apps</tspan>
-<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Building</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">IsoCourt, Eat Together</tspan>
-<tspan x="390" y="290">- Contact</tspan> -——————————————————————————————————————————————-—-
-<tspan x="390" y="310" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">Navneethd8</tspan>
-<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">navneethd8.github.io</tspan>
-<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">Seattle, WA</tspan>
-<tspan x="390" y="390" class="cc">. </tspan>
-<tspan x="390" y="410">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
-<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .. </tspan><tspan class="value" id="repo_data">32</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">10</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> .......... </tspan><tspan class="value" id="star_data">0</tspan>
-<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ............ </tspan><tspan class="value" id="commit_data">1,363</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ...... </tspan><tspan class="value" id="follower_data">4</tspan>
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Account Age</tspan>:<tspan class="cc" id="age_data_dots"> </tspan><tspan class="value" id="age_data">4 years, 8 months, 7 days</tspan>
-</text>
+<rect x="28" y="510" width="10" height="3" class="cursor"/>
 </svg>

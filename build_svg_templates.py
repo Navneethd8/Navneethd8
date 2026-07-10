@@ -1,163 +1,95 @@
 #!/usr/bin/env python3
-"""Build Andrew6rant-style profile SVG: ASCII bust + stats panel."""
+"""Build the terminal-style GitHub profile header."""
 
 from __future__ import annotations
 
-import html
 import os
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, ImageOps
-
-from portrait_handcrafted import build_handcrafted_bust, build_outline_bust
-
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = Path(os.environ.get("PROFILE_OUT_DIR", ROOT))
-PREVIEW_DIR = ROOT / "profile-svg"
-REFERENCE = Path("/Users/navneeth/Desktop/navneeth_dhamotharan.jpeg")
-PANEL_WIDTH = 390
-PANEL_HEIGHT = 530
-FONT_SIZE = 16
-LINE_HEIGHT = 20
 
 
-def load_font(size: int = FONT_SIZE) -> ImageFont.FreeTypeFont:
-    candidates = (
-        "/System/Library/Fonts/Menlo.ttc",
-        "/System/Library/Fonts/SFNSMono.ttf",
-        "/Library/Fonts/SF-Mono-Regular.otf",
-    )
-    for candidate in candidates:
-        if Path(candidate).exists():
-            return ImageFont.truetype(candidate, size=size)
-    raise FileNotFoundError("No supported monospace font found")
+def terminal_body() -> str:
+    return """<text class="terminal">
+<tspan x="28" y="82" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">fastfetch --logo none</tspan>
+<tspan x="28" y="112" class="label">user</tspan><tspan class="muted">        </tspan><tspan class="value">Navneeth Dhamotharan</tspan>
+<tspan x="28" y="136" class="label">school</tspan><tspan class="muted">      </tspan><tspan class="value">University of Washington, Seattle</tspan>
+<tspan x="28" y="160" class="label">major</tspan><tspan class="muted">       </tspan><tspan class="value">Data Science + Economics</tspan>
+<tspan x="28" y="184" class="label">graduation</tspan><tspan class="muted">  </tspan><tspan class="value">June 2027</tspan>
+<tspan x="28" y="208" class="label">focus</tspan><tspan class="muted">       </tspan><tspan class="value">ML systems · sports AI · full-stack apps</tspan>
+
+<tspan x="28" y="250" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">cat stack.txt</tspan>
+<tspan x="28" y="280" class="output">Python  Java  JavaScript  SQL  R  React  Node.js  Svelte</tspan>
+<tspan x="28" y="304" class="output">TensorFlow  Scikit-learn  XGBoost  React Native</tspan>
+
+<tspan x="28" y="346" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">github-stats --user Navneethd8</tspan>
+<tspan x="28" y="376" class="label">repos</tspan><tspan class="muted" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan><tspan class="muted">    contributed </tspan><tspan class="value" id="contrib_data">0</tspan><tspan class="muted">    stars</tspan><tspan class="muted" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
+<tspan x="28" y="400" class="label">commits</tspan><tspan class="muted" id="commit_data_dots"> ................. </tspan><tspan class="value" id="commit_data">0</tspan><tspan class="muted">    followers</tspan><tspan class="muted" id="follower_data_dots"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
+<tspan x="28" y="424" class="label">account age</tspan><tspan class="muted" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
+
+<tspan x="28" y="466" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">echo $CONTACT</tspan>
+<tspan x="28" y="496" class="output">github.com/Navneethd8  ·  navneethd8.github.io  ·  Seattle, WA</tspan>
+</text>
+<rect x="28" y="510" width="10" height="3" class="cursor"/>"""
 
 
-def render_portrait_png(lines: list[str], output: Path) -> Image.Image:
-    image = Image.new("RGB", (PANEL_WIDTH, PANEL_HEIGHT), "#f6f8fa")
-    draw = ImageDraw.Draw(image)
-    font = load_font()
-    for index, line in enumerate(lines):
-        draw.text(
-            (15, 14 + index * LINE_HEIGHT),
-            line,
-            fill="#24292f",
-            font=font,
+def build_svg(mode: str) -> str:
+    if mode == "dark":
+        bg, bar, border = "#0d1117", "#161b22", "#30363d"
+        text, muted = "#c9d1d9", "#8b949e"
+        prompt, path, command, label, value = (
+            "#3fb950",
+            "#79c0ff",
+            "#d2a8ff",
+            "#ff7b72",
+            "#e6edf3",
         )
-    image.save(output)
-    return image
-
-
-def render_comparison(portrait: Image.Image, output: Path) -> None:
-    reference = Image.open(REFERENCE).convert("RGB")
-    # Match the source framing used for the ASCII bust: hair through shoulders.
-    reference = reference.crop((190, 250, 610, 800))
-    reference = ImageOps.fit(
-        reference,
-        (PANEL_WIDTH, PANEL_HEIGHT),
-        method=Image.Resampling.LANCZOS,
-    )
-    comparison = Image.new("RGB", (PANEL_WIDTH * 2, PANEL_HEIGHT), "white")
-    comparison.paste(reference, (0, 0))
-    comparison.paste(portrait, (PANEL_WIDTH, 0))
-    comparison.save(output)
-
-
-def ascii_tspans(lines: list[str], x: int = 15, start_y: int = 30, line_height: int = 20) -> str:
-    chunks = []
-    for index, line in enumerate(lines):
-        y = start_y + index * line_height
-        chunks.append(f'<tspan x="{x}" y="{y}">{html.escape(line)}</tspan>')
-    return "\n".join(chunks)
-
-
-def stats_block(username: str, mode: str) -> str:
-    if mode == "dark":
-        fg = "#c9d1d9"
     else:
-        fg = "#24292f"
+        bg, bar, border = "#f6f8fa", "#eaeef2", "#d0d7de"
+        text, muted = "#24292f", "#57606a"
+        prompt, path, command, label, value = (
+            "#1a7f37",
+            "#0969da",
+            "#8250df",
+            "#cf222e",
+            "#24292f",
+        )
 
-    return f'''<text x="390" y="30" fill="{fg}">
-<tspan x="390" y="30">{username}@uw</tspan> -———————————————————————————————————————————-—-
-<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">macOS, Linux</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">School</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">UW Seattle</tspan>
-<tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Major</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">Data Science + Economics</tspan>
-<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Graduation</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">June 2027</tspan>
-<tspan x="390" y="130" class="cc">. </tspan>
-<tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">Python, Java, JavaScript, SQL, R</tspan>
-<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">ML</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">TensorFlow, Scikit-learn, XGBoost</tspan>
-<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Web</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">React, Node.js, Svelte, React Native</tspan>
-<tspan x="390" y="210" class="cc">. </tspan>
-<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Focus</tspan>:<tspan class="cc"> ............... </tspan><tspan class="value">ML systems, sports AI, full-stack apps</tspan>
-<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Building</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">IsoCourt, Eat Together</tspan>
-<tspan x="390" y="290">- Contact</tspan> -——————————————————————————————————————————————-—-
-<tspan x="390" y="310" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">Navneethd8</tspan>
-<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">navneethd8.github.io</tspan>
-<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">Seattle, WA</tspan>
-<tspan x="390" y="390" class="cc">. </tspan>
-<tspan x="390" y="410">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
-<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">0</tspan> {{<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">0</tspan>}} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
-<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ................. </tspan><tspan class="value" id="commit_data">0</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Account Age</tspan>:<tspan class="cc" id="age_data_dots"> .................... </tspan><tspan class="value" id="age_data">0</tspan>
-</text>'''
-
-
-def build_svg(mode: str, ascii_lines: list[str]) -> str:
-    if mode == "dark":
-        ascii_fill = "#c9d1d9"
-        bg = "#0d1117"
-        key, value, cc, add, delete = "#ff7b72", "#79c0ff", "#8b949e", "#3fb950", "#f85149"
-    else:
-        ascii_fill = "#24292f"
-        bg = "#f6f8fa"
-        key, value, cc, add, delete = "#953800", "#0a3069", "#c2cfde", "#1a7f37", "#cf222e"
-
-    return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,Menlo,monospace" width="985px" height="530px" font-size="16px">
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530">
 <style>
 @font-face {{
-src: local('Consolas'), local('Consolas Bold');
-font-family: 'ConsolasFallback';
-font-display: swap;
--webkit-size-adjust: 109%;
-size-adjust: 109%;
+  font-family: Terminal;
+  src: local('SFMono-Regular'), local('Menlo'), local('Consolas');
 }}
 text, tspan {{ white-space: pre; }}
-.key {{ fill: {key}; }}
-.value {{ fill: {value}; }}
-.cc {{ fill: {cc}; }}
-.addColor {{ fill: {add}; }}
-.delColor {{ fill: {delete}; }}
+.terminal {{ font: 15px Terminal, Menlo, Consolas, monospace; fill: {text}; }}
+.prompt {{ fill: {prompt}; font-weight: 700; }}
+.path {{ fill: {path}; font-weight: 700; }}
+.command {{ fill: {command}; }}
+.label {{ fill: {label}; }}
+.value, .output {{ fill: {value}; }}
+.muted {{ fill: {muted}; }}
+.cursor {{ fill: {prompt}; }}
 </style>
-<rect width="985px" height="530px" fill="{bg}" rx="15"/>
-<text x="15" y="30" fill="{ascii_fill}" class="ascii">
-{ascii_tspans(ascii_lines)}
-</text>
-{stats_block("navneeth", mode)}
+<rect width="985" height="530" rx="12" fill="{bg}" stroke="{border}"/>
+<path d="M12 0h961a12 12 0 0 1 12 12v34H0V12A12 12 0 0 1 12 0z" fill="{bar}"/>
+<line x1="0" y1="46" x2="985" y2="46" stroke="{border}"/>
+<circle cx="22" cy="23" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="23" r="6" fill="#febc2e"/>
+<circle cx="62" cy="23" r="6" fill="#28c840"/>
+<text x="492.5" y="28" text-anchor="middle" class="terminal muted">navneeth@uw: ~</text>
+{terminal_body()}
 </svg>
-'''
+"""
 
 
 def main() -> None:
-    lines = build_handcrafted_bust()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUT_DIR / "light_mode.svg").write_text(build_svg("light", lines), encoding="utf-8")
-    (OUT_DIR / "dark_mode.svg").write_text(build_svg("dark", lines), encoding="utf-8")
-    if os.environ.get("PROFILE_PREVIEW") == "1":
-        outline = build_outline_bust()
-        PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
-        (PREVIEW_DIR / "outline_preview.svg").write_text(
-            build_svg("light", outline),
-            encoding="utf-8",
-        )
-        render_portrait_png(outline, PREVIEW_DIR / "outline_preview.png")
-        portrait = render_portrait_png(lines, PREVIEW_DIR / "portrait_preview.png")
-        render_comparison(portrait, PREVIEW_DIR / "portrait_comparison.png")
-        portrait.resize(
-            (PANEL_WIDTH // 2, PANEL_HEIGHT // 2),
-            Image.Resampling.LANCZOS,
-        ).save(PREVIEW_DIR / "portrait_thumbnail.png")
-    print(f"Wrote templates to {OUT_DIR}")
+    (OUT_DIR / "light_mode.svg").write_text(build_svg("light"), encoding="utf-8")
+    (OUT_DIR / "dark_mode.svg").write_text(build_svg("dark"), encoding="utf-8")
+    print(f"Wrote terminal headers to {OUT_DIR}")
 
 
 if __name__ == "__main__":

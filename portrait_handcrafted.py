@@ -15,6 +15,7 @@ from __future__ import annotations
 #   - glasses brow .======. woven into line 8 void
 #   - lens dots .  . kept inside dense line 9 (not an empty box)
 #   - smile ~~~~~ instead of TTTTT on the mouth band
+#   - clean-shaven chin (open jaw void — no Andrew beard texture)
 #   - bag strap #\\ on torso
 HANDCRAFTED_BUST: list[str] = [
     "             ,g@@@@@$gy,                        ",
@@ -28,11 +29,11 @@ HANDCRAFTED_BUST: list[str] = [
     " ]@@@@L ,@@$ .  . L  ,l@$$$$$$$$@@@@@           ",
     "  %$@@@$}',,=======@@@@l@g@ggg|l$&$@@$          ",
     "  ]@@@@@'\"*~~~~~'F  ]Wl|||''\"'$]@@@@            ",
-    "   $$@M$       ,#    ]gg,,,,,.r'$@$             ",
-    "    &$L        ' ,, ,,,'T''`    $$L             ",
-    "     lL         T\"||||!   `-    l\"'             ",
-    "     ' |        '||l||||\"|L|  L `               ",
-    "      ''   '|L++=*****\"\"*\"||` L|                ",
+    "   $$@M$              ]gg,,,,,.r'$@$             ",
+    "    &$L                'T''`    $$L             ",
+    "     lL                  `-    l\"'              ",
+    "     ' |                      L `               ",
+    "      ''                 ''   L|                ",
     "        |           ,,      |||F                ",
     "        '         |||||||| ||l$                 ",
     "          !      '#\\       |l&L                 ",

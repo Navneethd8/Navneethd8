@@ -1,5 +1,7 @@
 # Hey, I'm Navneeth
 
+![ASCII desktop wallpaper](assets/github-banner.png)
+
 **Data Science + Economics @ UW Seattle** · graduating June 2027
 Building at the intersection of ML, systems, and things that actually ship.
 

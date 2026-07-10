@@ -1,35 +1,36 @@
-"""Hand-stylized ASCII bust portrait (Andrew6rant style)."""
+"""Hand-stylized ASCII bust portrait for Navneeth (Andrew6rant layout, original art)."""
 
 from __future__ import annotations
 
-# Full-density 25×48 bust — same composition quality as Andrew6rant.
-# Pure abstract shading. No emoji eyes / robot face box.
+# Original 25×48 bust — same panel density as Andrew6rant, not his face.
+# From navneeth_dhamotharan.jpeg: short hair, rectangular glasses,
+# closed smile, quilted puffer, diagonal strap.
 HANDCRAFTED_BUST: list[str] = [
-    "            ;;,, ,;,|g;~,,                      ",
-    "         ,g@@@@@@l&$$$@|,w$$@gy,                ",
-    "        $@@@@@@@@@@$@@@@@@@@$$MW$k              ",
-    "       $$@@@@@@B@@@@@@@@@@@@@$@$$g,$            ",
-    "     g@llM**'''||%@@@@@$@@$@@@@@@@L$&           ",
-    "   @$&$F         ''T%M$@@@@@@@@@@@$@$@          ",
-    "  @@@@F              ']@@@@@@$$@$@@@@           ",
-    "  @@@$L               |$@@@$$l$@@@@$F           ",
-    " ]@@@@L ,@@$@@@@L  ,l@$$$$$$$$$@@@@@            ",
-    "  %$@@@$}',,gg@||@@@@l@g@ggg|l$&$@@$            ",
-    "  ]@@@@@'\"*TTTTT'F  ]Wl|||''\"'$]@@@@            ",
-    "   $$@M$       ,#    ]gg,,,,,.r'$@$             ",
-    "    &$L        ' ,, ,,,'T''`    $$L             ",
-    "     lL         T\"||||!   `-    l\"'             ",
-    "     ' |        '||l||||\"|L|  L `               ",
-    "      ''   '|L++=*****\"\"*\"||` L|                ",
-    "        |           ,,      |||F                ",
-    "        '         |||||||| ||l$                 ",
-    "          !                |l&L                 ",
-    "           '!,       |||,||@M|L                 ",
-    "            ||l&$@$$@$$$@$MT|||                 ",
-    "         |    |||lll$$llll|||||L                ",
-    "    ,;y@        ||||||l||@|||||l                ",
-    ",g$@$$$@         |||||||||||||||| $g,           ",
-    "$$$$$$$$@    |    |||||||||||||| |$$@g          ",
+    "             ,;;,,,,;;,                         ",
+    "          ,g@@@@@@@@@@gy,                       ",
+    "        g@@@@@@@@@@@@@@@$k                      ",
+    "       $@@@@@@@@@@@@@@@@@@$                     ",
+    "      $$@@@@B@@@@@@@@B@@@@$$                    ",
+    "     @$&$F   ''''''''   F$&$@                   ",
+    "    @@@@F  .============.  F@@@@                ",
+    "    @@@$L |   .      .    | L$@@@               ",
+    "   ]@@@@L |               | L@@@@]              ",
+    "    %$@@@  '============='  @@@$%               ",
+    "    ]@@@@@   ,,,,,,,,,,.   @@@@@]               ",
+    "     $$@M$    \\_______/    $M@$$                ",
+    "      &$L      |||||||      L$&                 ",
+    "       lL     |||||||||     Ll                  ",
+    "       ' |   |||||||||||   | '                  ",
+    "        ''  '|+++++++++|  ''                    ",
+    "          |     ,#,      |                      ",
+    "          '   |||||||    '                      ",
+    "            !  #||||#   !                       ",
+    "             '!,||||,!'                         ",
+    "           ||l&$$$$$$&l||                       ",
+    "        |  |||lll$$lll|||  |                    ",
+    "   ,;y@       ||||||||||       @y;,             ",
+    ",g$@$$$@       ||||||||       @$$$@g,           ",
+    "$$$$$$$$@  |    ||||||    |  @$$$$$$$$          ",
 ]
 
 CANVAS_WIDTH = 48

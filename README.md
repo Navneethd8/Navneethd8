@@ -1,7 +1,31 @@
 # Hey, I'm Navneeth
 
 <p align="center">
-  <img src="assets/navneeth-dhamotharan.png" alt="ASCII profile" width="420" />
+<pre>
+                        &lt;I,,,::!i&gt;
+                      _,         &#x27;I
+                     ,  I?1funj{,  :*
+                    ^ |0hWM*aahpv^  l
+                    &#x27;IJn)1nXx))\n{  &#x27;
+                    &#x27;,{l  !f    `i&#x27;
+                    )n*QxzM n\jcc/i&#x27;+t
+                    J#Q}xYr}/|\YQO*-f/
+                    bwf,/\i:&lt;?,&lt;/x*vu
+                     YvYZY({))[-[_}U
+                      0vYcf\\(?l`+
+                    :^.]?       !?,]&gt;i
+                    !&#x27; &quot;v{&#x27;..  .,&#x27; &#x27;.&#x27;&lt;
+                     _&#x27; &lt;)&#x27;          ,{\)}[i:,^^^^i
+                 LZr~j,  l`            l)[?i`     `
+             Qxrx\[~[\;                l)()?!&#x27;    .&gt;
+            {([\~, {}-`              .^&#x27;   .&#x27;`&#x27;    i
+           (;!+&lt;&quot;^_]+l:&#x27; &#x27;&#x27;..   .&#x27;&#x27;&quot;`.``^^&#x27;       .&gt;
+          \~ii~:&gt;&gt;]][;,.&quot;;^&#x27; :I: `,&#x27;.;l!I&#x27;         i
+         t+&#x27;i&lt;&quot;^,!I_&lt;. .,.. &gt;]i&#x27;;^ ^?]~!^&#x27;&#x27;``&#x27;    ^
+        u{;&#x27;i^ .  `:&#x27;.     ?bo`l: .l!:`.&#x27;&quot;&quot;,^.  .`
+       t[;,&#x27;&#x27;    &#x27;`&#x27;.      l|*i: ..    .&#x27;&#x27;&#x27;`&#x27;. &quot;
+       }         ^&#x27;&#x27;&#x27;    &#x27;&#x27;   ~  &#x27;   &#x27;&#x27;    &#x27; &#x27;
+</pre>
 </p>
 
 **Data Science + Economics @ UW Seattle** · graduating June 2027

@@ -42,8 +42,8 @@ text, tspan { white-space: pre; }
 
 <tspan x="28" y="490" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~/dev</tspan><tspan class="muted">$ </tspan><tspan class="command">github-stats --user Navneethd8</tspan>
 <tspan x="28" y="520" class="label">repos</tspan><tspan class="muted" id="repo_data_dots"> .. </tspan><tspan class="value" id="repo_data">32</tspan><tspan class="muted">    contributed </tspan><tspan class="value" id="contrib_data">10</tspan><tspan class="muted">    stars</tspan><tspan class="muted" id="star_data_dots"> .......... </tspan><tspan class="value" id="star_data">0</tspan>
-<tspan x="28" y="544" class="label">commits</tspan><tspan class="muted" id="commit_data_dots"> ............ </tspan><tspan class="value" id="commit_data">1,370</tspan><tspan class="muted">    followers</tspan><tspan class="muted" id="follower_data_dots"> ...... </tspan><tspan class="value" id="follower_data">4</tspan>
-<tspan x="28" y="568" class="label">account age</tspan><tspan class="muted" id="age_data_dots"> </tspan><tspan class="value" id="age_data">4 years, 8 months, 8 days</tspan>
+<tspan x="28" y="544" class="label">commits</tspan><tspan class="muted" id="commit_data_dots"> ............ </tspan><tspan class="value" id="commit_data">1,384</tspan><tspan class="muted">    followers</tspan><tspan class="muted" id="follower_data_dots"> ...... </tspan><tspan class="value" id="follower_data">4</tspan>
+<tspan x="28" y="568" class="label">account age</tspan><tspan class="muted" id="age_data_dots"> </tspan><tspan class="value" id="age_data">4 years, 8 months, 9 days</tspan>
 
 <tspan x="28" y="610" class="prompt">navneeth@uw</tspan><tspan class="muted">:</tspan><tspan class="path">~</tspan><tspan class="muted">$ </tspan><tspan class="command">echo $CONTACT</tspan>
 <tspan x="28" y="640" class="output">github.com/Navneethd8  ·  navneethd.me  ·  Seattle, WA</tspan>
